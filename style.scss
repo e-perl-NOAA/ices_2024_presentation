@@ -1,0 +1,133 @@
+/*-- scss:defaults --*/
+
+$theme-light: #FFF4E0;
+$theme-yellow: #FFE0A8AA;
+$theme-orange: #D97146;
+$theme-red: #AD5769;
+$theme-grey: #515966;
+$theme-lightgrey: #90A1B8;
+$theme-fishlight: #d8e8e9;
+$theme-fishdark: #0d1b34;
+$theme-fishmid: #82bbc8;
+$theme-fishaqua: #59b8b7;
+$theme-fishbright: #70def4;
+$theme-fishgreen: #a3d29d;
+$theme-fishpurple: #a89bbb;
+$theme-process-blue: #0085CA;
+$theme-reflexblue: #003087;
+$theme-national: #002364;
+$theme-ltteal: #1ECAD3;
+$theme-westcoast: #007582;
+$theme-ltgreen: #76BC21;
+$theme-southeast: #4a8b2c;
+$theme-purple: #7171FF;
+$theme-midatlantic: #5145b9;
+$theme-orange: #FF8400;
+$theme-alaska: #db6015;
+$theme-red: #FF4438;
+$theme-pacificislands: #D02C2F;
+
+$body-bg: $theme-fishlight;
+$body-color: $theme-fishdark;
+$link-color: $theme-fishaqua;
+
+
+$code-block-font-size: 1em;
+
+$presentation-font-smaller: 0.7rem;
+
+/*-- scss:rules --*/
+
+.orange {
+  color: $theme-orange;
+  font-weight: bold;
+}
+
+.red {
+  color: $theme-red;
+  font-weight: bold;
+}
+
+.reveal pre code {
+  max-height: 1000px;
+}
+
+.reveal div.sourceCode pre code {
+    background-color: $theme-yellow;
+}
+
+.reveal .title {
+  color: $theme-fishdark;
+}
+
+.reveal .footer {
+  color: $theme-grey;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+
+@keyframes animate {
+	0% {
+		background-position: left 0px top 10px;
+	}
+	40% {
+		background-position: left 800px top 10px;
+	}
+}
+
+.smallfont {
+  font-size: 12px;
+}
+
+h2 {
+  line-height: 0.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-end: 0px;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  -webkit-margin-before: 0px;
+  white-space: nowrap;
+  display: inline;
+}
+
+h4 {
+  padding: 0em;
+  white-space: nowrap;
+  display: inline;
+  font-size: 25;
+}
+
+
+h5 {
+  padding: 0em;
+  font-size: 22px;
+  white-space: nowrap;
+  display: inline;
+}
+
+.lesspad li:not(:last-child) {
+    line-height:30px  !important;
+    margin-right:50px !important;
+}
+
+// fragment highlight colors --------------------------------------------------
+.reveal .slides section {
+  .fragment.highlight-aqua,
+
+  .fragment.highlight-aqua.visible {
+      background-color: rgba($theme-fishaqua, 0.5);
+      color: $theme-fishdark;
+      border-radius: 20px;
+      padding: 10px;
+    }
+}
