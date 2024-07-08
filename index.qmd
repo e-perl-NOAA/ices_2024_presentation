@@ -16,22 +16,22 @@ from: markdown+emoji
 <h4>[Andrea Havron](mailto:andrea.havron@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 <h4>[Ian Taylor](mailto:ian.taylor@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 
-![](fish_laptop.png){.absolute left=375 top=190 width="600"}
+![](images/fish_laptop.png){.absolute left=375 top=190 width="600"}
 ---
 
 ## What I went to school for:
 
 ::: columns
 ::: {.column width="33.3%"}
-![](dive_square.png){width="300" height="275"} ![](turtle.png){width="300" height="275"}
+![](images/dive_square.png){width="300" height="275"} ![](turtle.png){width="300" height="275"}
 :::
 
 ::: {.column width="33.3%"}
-![](rov.png){width="300" height="275"} ![](sub.png){width="300" height="275"}
+![](images/rov.png){width="300" height="275"} ![](sub.png){width="300" height="275"}
 :::
 
 ::: {.column width="33.3%"}
-![](rov_drive.png){width="300" height="275"} ![](dive_fun.png){width="300" height="275"}
+![](images/rov_drive.png){width="300" height="275"} ![](dive_fun.png){width="300" height="275"}
 :::
 :::
 
@@ -43,8 +43,8 @@ Maybe like many of you, this is what I went to school for.
 
 ## What I do now:
 
-![](mitchell-luo-FWoq_ldWlNQ-unsplash.jpg){width="500" height="450"}
-![](RStudio.png){width="500" height="450"}
+![](images/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg){width="500" height="450"}
+![](images/RStudio.png){width="500" height="450"}
 
 
 . . .
@@ -64,7 +64,7 @@ frustration).
 ## Can we build it? Yes we can!
 
 
-![](Bob_the_builder.png){.absolute top=380}
+![](images/Bob_the_builder.png){.absolute top=380}
 `ggplot(data)`{.absolute style="top:85%; left:55%; transform:rotate(38deg);"}
 `x = numpy.array([0,1,2,3,4,5])`{.absolute style="color:#76BC21; font-size:22px; top:82%; left:22%; transform:rotate(-35deg);"}
 `git fetch --tags`{.absolute style="color:#007582; font-size:30px; top:70%; left:70%; transform:rotate(-20deg);"}
@@ -95,20 +95,20 @@ create tools, packages, programs, etc. for us, so we build it ourselves.
 
 
 ![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png){.absolute top=125 width="300"}
-![](Github-logo.png){.absolute left=410 width="215"}
-![](Docker.png){.absolute left=760 width="230"}
+![](images/Github-logo.png){.absolute left=410 width="215"}
+![](images/Docker.png){.absolute left=760 width="230"}
 
-![](Python-Logo.png){.absolute top=350 width="315"}
+![](imgaes/Python-Logo.png){.absolute top=350 width="315"}
 
-![](Kubernetes-Logo.png){.absolute left=375 top=320 width="300"}
+![](images/Kubernetes-Logo.png){.absolute left=375 top=320 width="300"}
 
-![](Jupyter_logo.svg.png){.absolute left=785 top=295 width="175"}
+![](images/Jupyter_logo.svg.png){.absolute left=785 top=295 width="175"}
 
-![](code-stable.png){.absolute top=505 left=70 width="175"}
+![](images/code-stable.png){.absolute top=505 left=70 width="175"}
 
-![](singularity-logo.png){.absolute left=425 top=500 width="200"}
+![](images/singularity-logo.png){.absolute left=425 top=500 width="200"}
 
-![](Microsoft_Azure_Logo.svg.png){.absolute top=550 left=730 width="280"}
+![](images/Microsoft_Azure_Logo.svg.png){.absolute top=550 left=730 width="280"}
 
 
 
@@ -133,7 +133,7 @@ And we suffer the consequences...
 ---
 
 ## Sun-setting of ADMB
-![](ADMB_logo.png){.absolute bottom=600 left=500 width="300"}
+![](images/ADMB_logo.png){.absolute bottom=600 left=500 width="300"}
 
 :::{.nopad}
 - [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
@@ -190,7 +190,7 @@ Not the example that we want to follow
     feedback, and providing user support
 :::
 
-![](software_maintenance_transparent.png){.absolute top=140 left=570 width="550"}
+![](images/software_maintenance_transparent.png){.absolute top=140 left=570 width="550"}
 
 ::: {style="font-size: 60%"}
 <br>
@@ -217,7 +217,7 @@ Clear documentation of the code base, equations, and architecture, including inl
   - Take advantage of open source :computer:
   - Recurring office hours :office:
   - Developer events :circus_tent:
-  - Example: [GitHub community](https://github.com/orgs/community/discussions/) :octocat:
+  - Example: [GitHub community](https://github.com/orgs/community/discussions/)
 :::
 
 ---
