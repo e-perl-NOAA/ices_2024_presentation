@@ -427,7 +427,7 @@ NOAA Fisheries
 <p><img data-src="singularity-logo.png" class="absolute" style="top: 500px; left: 425px; width: 200px; "></p>
 <p><img data-src="Microsoft_Azure_Logo.svg.png" class="absolute" style="top: 550px; left: 730px; width: 280px; "></p>
 <aside class="notes">
-<p>We have embraced tools like RStudio, Jupyter, GitHub, Docker, .</p>
+<p>We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -454,30 +454,164 @@ NOAA Fisheries
 </section>
 <section id="sun-setting-of-admb" class="slide level2">
 <h2>Sun-setting of ADMB</h2>
+<p><img data-src="ADMB_logo.png" class="absolute" style="left: 500px; bottom: 600px; width: 300px; "></p>
+<div class="nopad">
 <ul>
-<li><a href="https://www.admb-project.org/">ADMB</a>: automatic differentiation (AD) application used to build stock assessment models</li>
-</ul>
-<div class="lesspad">
+<li><a href="https://www.admb-project.org/">ADMB</a>: automatic differentiation (AD) application used to build stock assessment models
 <ul>
 <li>Stock Synthesis (SS3)</li>
 <li>Beaufort Assessment Model (BAM)</li>
 <li>General Model for Assessing Crustacean Stocks (GMACs)</li>
-</ul>
-</div>
+</ul></li>
+<li>ADMB funding ended March 2024</li>
+<li>March 2024 ADMB Foundation meeting to discuss orderly shutdown:
 <ul>
-<li>ADMB funding ran out March 2024</li>
-<li>ADMB Foundation meeting March 7th, 2024 to discuss final steps for orderly shutdown:
-<ul>
-<li>Final release of ADMB 13.2</li>
+<li>Final release of ADMB 13.2 March 15, 2024</li>
 <li>Docker image of ADMB</li>
 <li>No new feature development as sole developer leaves</li>
-<li>Bug fixes???</li>
+<li>Bug fixes and user group support?</li>
 </ul></li>
 </ul>
-<p>Not the example that we want to follow</p>
+</div>
+<aside class="notes">
+<p>The docker image of admb was an attempt to provide future stability. Not the example that we want to follow</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section class="slide level2">
-
+<section id="downstream-problems" class="slide level2">
+<h2>Downstream problems</h2>
+<div class="nopad">
+<ul>
+<li>Building models locally using ADMB
+<ul>
+<li>Eventual library mismatches will make this impossible</li>
+</ul></li>
+<li>The docker images:
+<ul>
+<li>Steep learning curve</li>
+<li>Works for now…new architectures in the future can become and issue (Windows 2022 and MacOS arm-64)</li>
+</ul></li>
+<li>No concrete plan for bug fixes
+<ul>
+<li>The maintainer has moved on to another job, cannot be expected to continue maintenance for free</li>
+<li>One volunteer to try to handle bug fixes</li>
+</ul></li>
+<li>User group support
+<ul>
+<li>Slow responses by a select few that have a better understanding of ADMB</li>
+</ul></li>
+<li>Trying to build models using ADMB will eventually require users to have a greater amount of computer and software knowledge</li>
+<li>Inside-out knowledge of ADMB is hard to find and will become even more difficult.</li>
+<li>There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring that these models will be unaffected</li>
+</ul>
+</div>
+</section>
+<section id="improving-software-maintenance" class="slide level2">
+<h2>Improving software maintenance</h2>
+<div class="nopad">
+<ul>
+<li>Software maintenance plans</li>
+<li>Clear documentation and <br> user manuals/tutorials</li>
+<li>Version control</li>
+<li>Automated testing (unit, integration, <br> end-to-end)</li>
+<li>Regular code review</li>
+<li>CI/CD</li>
+<li>Encourage continuous learning for <br> the development team, getting user <br> feedback, and providing user support</li>
+</ul>
+</div>
+<p><img data-src="software_maintenance_transparent.png" class="absolute" style="top: 140px; left: 570px; width: 550px; "></p>
+<div style="font-size: 60%">
+<p><br> <br> Sourced from: https://www.simform.com/blog/software-maintenance/</p>
+</div>
+<aside class="notes">
+<p>Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product. Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fostering-developer-and-user-communities" class="slide level2" style="font-size=60%">
+<h2>Fostering developer and user communities</h2>
+<div class="nopad">
+<ul>
+<li><p>Fundamental to thriving software communities</p></li>
+<li><p>Useful way support and maintain software after it has been phased out and/or the maintainer changes</p></li>
+<li><p>Ways to build a strong developer community</p>
+<ul>
+<li>Chat platform <span class="emoji" data-emoji="speech_balloon">💬</span></li>
+<li>Active developer forums <span class="emoji" data-emoji="raised_hand">✋</span></li>
+<li>Take advantage of open source <span class="emoji" data-emoji="computer">💻</span></li>
+<li>Recurring office hours <span class="emoji" data-emoji="office">🏢</span></li>
+<li>Developer events <span class="emoji" data-emoji="circus_tent">🎪</span></li>
+<li>Example: <a href="https://github.com/orgs/community/discussions/">GitHub community</a> :octocat:</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="creating-software-development-teams-that-have-diverse-expertise" class="slide level2">
+<h2>Creating software development teams that have diverse expertise</h2>
+<div class="nopad">
+<ul>
+<li>Software development is complex and involves many skills such as:
+<ul>
+<li>coding</li>
+<li>design &amp; UI/UX</li>
+<li>project management</li>
+<li>statistics</li>
+<li>mathematics</li>
+<li>AI</li>
+<li>cloud computing</li>
+<li>computer science</li>
+<li>systems architecture and administration</li>
+<li>subject matter expertise (population dynamics, MSE, etc.)</li>
+</ul></li>
+<li>We should be incorporating people with expertise in these skills into our software development projects to help ensure that all aspects of the project are considered, which can lead to more well-rounded software products</li>
+</ul>
+</div>
+</section>
+<section id="application-to-other-softwares" class="slide level2">
+<h2>Application to other softwares</h2>
+<ul>
+<li>SS3</li>
+<li>MULTIFAN-CL</li>
+<li>TMB</li>
+<li>FIMS</li>
+</ul>
+</section>
+<section id="great-idea-even-greater-hurdles-to-make-it-happen" class="slide level2">
+<h2>Great idea, even greater hurdles to make it happen</h2>
+<ul>
+<li></li>
+</ul>
+<aside class="notes">
+<p>This is all well in good but I do recognize that there are some major hurdles to get us where we need to be, the biggest being time and money. But there is some low-hanging fruit here that I think we can start to take advantage of.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
