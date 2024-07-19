@@ -8,61 +8,339 @@ revealjs-plugins:
 from: markdown+emoji
 ---
 
-## How do fisheries scientists develop software well? {.title}
+## How do fisheries scientists develop software well? {.title style="font-size:110%"}
 
 <h3>Lessons learned from the ADMB shutdown</h3>
-  
+
 <h3>[Elizabeth Perl](mailto:elizabeth.gugliotti@noaa.gov)</h3> <h5>ECS, NOAA Fisheries</h5> <br>
 <h4>[Andrea Havron](mailto:andrea.havron@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 <h4>[Ian Taylor](mailto:ian.taylor@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 
-![](images/fish_laptop.png){.absolute left=375 top=190 width="600"}
+![](images/fish_laptop.png){.absolute left=470 top=190 width="580"}
+
+
+::: footer
+https://e-perl-noaa.github.io/ices_2024_presentation
+:::
+
 ---
 
-## What I went to school for:
+## 
+
+:::{.absolute left=625 top=80 style="color: #0d1b34; font-size: 150%; font-weight: bold;"}
+What I was trained to do...
+:::
+
+![](images/rockfish.JPG){.absolute left=-10 top=-20 width="400"}
+![](images/dive_square.png){.absolute left=90 top=335 width="300"}
+![](images/rov.png){.absolute left=405 top=260 width="475"} 
+![](images/rov_drive.png){.absolute left=405 top=60 width="185"}
+
+::: {.notes}
+Maybe like many of you, this is what I went to school for and was trained for.
+:::
+
+---
+
+## {.color-slide background-image="images/coding.jpg" background-size=300}
+
+:::{.absolute top=550 left=625 style="font-size:150%; font-weight: bold; color: #d8e8e9;"}
+What I do now...
+:::
+
+::: {.notes}
+We find ourselves in spaces that look more like this. We build the tools that we need to do our jobs because it's cheaper to do so than paying software developers to do so and to allow us to have more control over the software that is being developed.
+:::
+
+---
+
+
+## For the most part, we do pretty well!
+
+
+![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png){.absolute top=125 width="300"}
+![](images/GitHub-logo.png){.absolute left=410 width="215" .fragment}
+![](images/Docker.png){.absolute left=760 width="230" .fragment}
+
+![](images/Python-Logo.png){.absolute top=350 width="315" .fragment}
+
+![](images/Kubernetes-Logo.png){.absolute left=375 top=320 width="300" .fragment}
+
+![](images/Jupyter_logo.svg.png){.absolute left=785 top=295 width="175" .fragment}
+
+![](images/code-stable.png){.absolute top=505 left=70 width="175" .fragment}
+
+![](images/singularity-logo.png){.absolute left=425 top=500 width="200" .fragment}
+
+![](images/Microsoft_Azure_Logo.svg.png){.absolute top=550 left=730 width="280" .fragment}
+
+
+
+::: {.notes}
+We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, take advantage of cloud computing, move into automation, and so much more.
+:::
+
+---
+
+## However, we aren't (truly) software developers
+
+- Scientists develop software and models fundamentally different than software developers/engineers^1^
+
+- We are criticized for for lacking adequate:
+
+  ::: columns
+  ::: {.column width="40%" .nopad}
+    - Unit tests
+    - Documentation
+  :::
+  
+  ::: {.column width="60%" .nopad}
+    - Open-source code management
+    - Long-term maintenance
+  :::
+  :::
+
+::: {style="color: #007582; font-weight:bold; margin-top:-3%; margin-bottom:0%" .fragment}
+Largely because we lack the time, money, and software development expertise
+:::
+
+::: {style="text-align: right; margin-bottom:-3%" .fragment}
+But, we suffer the consequences...
+:::
+
+::: {style="font-size: 50%"}
+<br>
+^1^: Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
+:::
+
+---
+
+## Example: Shutdown of ADMB
+![](images/ADMB_logo.png){.absolute bottom=600 left=725 width="300"}
+
+:::{style="font-size: 95%" .nopad}
+- [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
+  - Stock Synthesis (SS3)
+  - Beaufort Assessment Model (BAM)
+  - General Model for Assessing Crustacean Stocks (GMACs)
+- ADMB funding ended March 2024
+- March 2024 ADMB Foundation meeting to discuss orderly shutdown:
+  - Final release of ADMB 13.2 March 15, 2024
+  - Docker image of ADMB 
+  - No new feature development as sole developer leaves
+  - Bug fixes and user group support?
+:::
+
+
+::: {.notes}
+The docker image of admb was an attempt to provide future stability.
+:::
+
+---
+
+## Downstream problems
 
 ::: columns
-::: {.column width="33.3%"}
-![](images/dive_square.png){width="300" height="275"} ![](images/turtle.png){width="300" height="275"}
+
+::: {.column width="47%" .nopad style="font-size:95%"}
+- Building models locally
+  - Most ADMB users do this
+  - Eventual library mismatches will make this impossible
+- The docker images:
+  - Steep learning curve
+  - Works...for now
 :::
 
-::: {.column width="33.3%"}
-![](images/rov.png){width="300" height="275"} ![](images/sub.png){width="300" height="275"}
+::: {.column width="53%" .nopad style="font-size:95%"}
+- No concrete plan for bug fixes
+  - The maintainer has moved on to another job
+  - One volunteer to try to handle bug fixes
+- User group
+  - Slow responses by select few
+  - Few people with inside-out knowledge of ADMB
 :::
 
-::: {.column width="33.3%"}
-![](images/rov_drive.png){width="300" height="275"} ![](images/dive_fun.png){width="300" height="275"}
 :::
+
+::: {style="color: #007582; font-size:125%; font-weight:bold"}
+How do we maintain our models well knowing that a major dependency no longer has support?
 :::
 
 ::: {.notes}
-Maybe like many of you, this is what I went to school for.
+- Trying to build models using ADMB will eventually require users to have a greater amount of computer and software knowledge
+- There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring that these models will be unaffected
 :::
 
 ---
 
-## What I do now:
+## 
+::: {.fullslide-text .flow}
+How can we make more stable scientific software?
+:::
+::: {style="color: #007582; font-weight: bold; font-size: 150%"}
+For stock assessment and other areas.
+:::
+---
 
-![](images/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg){width="500" height="450"}
-![](images/Rstudio.png){width="500" height="450"}
+## Improve software maintenance^2^
+:::{.nopad}
+  - Software maintenance plans
+  - Clear documentation and <br> user manuals/tutorials
+  - Version control
+  - Automated testing (unit, <br>
+    integration, end-to-end)
+  - Regular code review
+  - CI/CD
+  - Encourage continuous <br>
+    learning for the development <br> 
+    team, getting user feedback, <br>
+    and providing user support
+:::
 
+![](images/software_maintenance_transparent.png){.absolute top=160 left=500 width="580"}
 
-. . .
-
-::: {.r-stack}
-😱😫🤬
+::: {style="font-size: 50%"}
+<br>
+<br>
+^2^:https://www.simform.com/blog/software-maintenance/
 :::
 
 
 ::: {.notes}
-But now we find ourselves in spaces that look more like this (with a lot of 
-frustration).
+Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product.
+Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting. 
 :::
 
 ---
 
-## Can we build it? Yes we can!
+## Foster developer and user communities {style="font-size=60%"}
+:::{.nopad}
+- Fundamental to thriving software communities
+- Useful way support and maintain software after it has been phased out and/or the maintainer changes
 
+- Ways to build a strong developer community
+  - Chat platform :speech_balloon:
+  - Active developer forums :raised_hand:
+  - Take advantage of open source :computer:
+  - Recurring office hours :office:
+  - Developer events & trainings :circus_tent:
+  - Example: [GitHub community](https://github.com/orgs/community/discussions/)
+:::
+
+---
+
+## Create software development teams with diverse expertise
+
+- Software development is complex and involves many skills
+
+  ::: columns
+  ::: {.column width="48%" .nopad}
+    - coding
+    - design & UI/UX
+    - project management
+    - statistics/statistical
+      computing
+    - mathematics
+    - AI & ML
+  :::
+  ::: {.column width="52%" .nopad}
+    - cloud computing
+    - data science
+    - computer science
+    - systems architecture and 
+      administration
+    - subject matter expertise 
+      (population dynamics, 
+      MSE, etc.)
+  :::
+  :::
+
+---
+
+## Create software development teams with diverse expertise
+
+- Software development is complex and involves many skills
+- Ensure all aspects of the project are considered
+  - More well-rounded software products
+  - Long-term stability of the software
+- Better adaptability/capacity for change 
+  - Incorporate new technologies and methods quickly
+
+::: {.notes}
+- We should be incorporating people with expertise in these skills into our software development projects to help ensure that all aspects of the project are considered, which can lead to more well-rounded software products
+:::
+
+---
+
+
+## 
+
+::: {style="color:#007582; font-size:150%; font-weight:bold"}
+Sure this is a great idea and all...
+:::
+
+---
+
+##
+
+::: {style="color:#007582; font-size:150%; font-weight:bold"}
+Sure this is a great idea and all...
+:::
+
+![](images/runner.png){.absolute top=90 left=55 width="400"}
+![](images/down.png){.absolute top=175 left=555 width="400"}
+
+::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=525}
+but there are so many hurdles to make it happen
+:::
+
+---
+
+## Low-hanging fruit
+
+![](images/apple_tree.png){.absolute top=10 left=515 width="550"}
+
+- Software maintenance
+  - Developing software <br>
+    maintenance plans
+  - Clear documentation, <br>
+    tutorials, and trainings
+  - Using version control
+- Building software development <br>
+  **and** user communities
+
+
+![](images/fruit_basket.png){.absolute top=500 left=415 width="175"}
+![](images/fruit_basket.png){.absolute top=460 left=580 width="175"}
+![](images/fruit_basket.png){.absolute top=490 left=810 width="175"}
+
+::: {.absolute top=625 left=470 style="font-weight:bold;"}
+SS3
+:::
+
+:::{.absolute top=585 left=630 style="font-weight:bold;"}
+TMB
+:::
+
+:::{.absolute top=615 left=860 style="font-weight:bold;"}
+FIMS
+:::
+
+---
+
+## {.color-slide background-image="images/team.png" background-size=500px background-opacity=0.4}
+
+::: {style="font-size: 300%; color: #007582; font-weight: bold; text-align: center; padding:150px"}
+Let's tackle this together!
+:::
+  
+::: footer
+https://e-perl-noaa.github.io/ices_2024_presentation
+:::
+
+---
+
+## Can we build it? Yes we can! {visibility="hidden"}
 
 ![](images/Bob_the_builder.png){.absolute top=380}
 `ggplot(data)`{.absolute style="top:85%; left:55%; transform:rotate(38deg);"}
@@ -91,170 +369,18 @@ create tools, packages, programs, etc. for us, so we build it ourselves.
 
 ---
 
-## For the most part, we do pretty well!
+## {visibility="hidden"}
 
-
-![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png){.absolute top=125 width="300"}
-![](images/GitHub-logo.png){.absolute left=410 width="215"}
-![](images/Docker.png){.absolute left=760 width="230"}
-
-![](images/Python-Logo.png){.absolute top=350 width="315"}
-
-![](images/Kubernetes-Logo.png){.absolute left=375 top=320 width="300"}
-
-![](images/Jupyter_logo.svg.png){.absolute left=785 top=295 width="175"}
-
-![](images/code-stable.png){.absolute top=505 left=70 width="175"}
-
-![](images/singularity-logo.png){.absolute left=425 top=500 width="200"}
-
-![](images/Microsoft_Azure_Logo.svg.png){.absolute top=550 left=730 width="280"}
-
-
-
-::: {.notes}
-We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more.
+::: {.bigbold .absolute top="-15%"}
+MONEY
 :::
-
----
-
-## HOWEVER
-
-We still lack the knowledge, funding, or time to do:
-
-- Unit tests/testing
-- Documentation
-- Open-source code management
-- Long-term maintenance
-- Sun-setting
-
-And we suffer the consequences...
-
----
-
-## Sun-setting of ADMB
-![](images/ADMB_logo.png){.absolute bottom=600 left=500 width="300"}
-
-:::{.nopad}
-- [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
-  - Stock Synthesis (SS3)
-  - Beaufort Assessment Model (BAM)
-  - General Model for Assessing Crustacean Stocks (GMACs)
-- ADMB funding ended March 2024
-- March 2024 ADMB Foundation meeting to discuss orderly shutdown:
-  - Final release of ADMB 13.2 March 15, 2024
-  - Docker image of ADMB 
-  - No new feature development as sole developer leaves
-  - Bug fixes and user group support?
+::: {.bigbold .absolute top="20%"}
+MONEY
 :::
-
-
-::: {.notes}
-The docker image of admb was an attempt to provide future stability.
-Not the example that we want to follow
+::: {.bigbold .absolute top="55%"}
+MONEY
 :::
-
----
-
-## Downstream problems
-:::{.nopad}
-- Building models locally using ADMB
-  - Eventual library mismatches will make this impossible
-- The docker images:
-  - Steep learning curve
-  - Works for now...new architectures in the future can become and issue (Windows 2022 and MacOS arm-64)
-- No concrete plan for bug fixes
-  - The maintainer has moved on to another job, cannot be expected to continue maintenance for free
-  - One volunteer to try to handle bug fixes
-- User group support
-  - Slow responses by a select few that have a better understanding of ADMB
-
-- Trying to build models using ADMB will eventually require users to have a greater amount of computer and software knowledge
-- Inside-out knowledge of ADMB is hard to find and will become even more difficult.
-- There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring that these models will be unaffected
-:::
-
----
-
-## Improving software maintenance
-:::{.nopad}
-  - Software maintenance plans
-  - Clear documentation and <br> user manuals/tutorials
-  - Version control
-  - Automated testing (unit, integration, 
-    <br> end-to-end)
-  - Regular code review
-  - CI/CD
-  - Encourage continuous learning for <br>
-    the development team, getting user <br>
-    feedback, and providing user support
-:::
-
-![](images/software_maintenance_transparent.png){.absolute top=140 left=570 width="550"}
-
-::: {style="font-size: 60%"}
-<br>
-<br>
-Sourced from: https://www.simform.com/blog/software-maintenance/
-:::
-
-
-::: {.notes}
-Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product.
-Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting. 
-:::
-
----
-
-## Fostering developer and user communities {style="font-size=60%"}
-:::{.nopad}
-- Fundamental to thriving software communities
-- Useful way support and maintain software after it has been phased out and/or the maintainer changes
-
-- Ways to build a strong developer community
-  - Chat platform :speech_balloon:
-  - Active developer forums :raised_hand:
-  - Take advantage of open source :computer:
-  - Recurring office hours :office:
-  - Developer events :circus_tent:
-  - Example: [GitHub community](https://github.com/orgs/community/discussions/)
-:::
-
----
-
-## Creating software development teams that have diverse expertise
-:::{.nopad}
-- Software development is complex and involves many skills such as:
-  - coding
-  - design & UI/UX
-  - project management
-  - statistics
-  - mathematics
-  - AI
-  - cloud computing
-  - computer science
-  - systems architecture and administration
-  - subject matter expertise (population dynamics, MSE, etc.)
-  
-- We should be incorporating people with expertise in these skills into our software development projects to help ensure that all aspects of the project are considered, which can lead to more well-rounded software products
-:::
-
----
-
-## Application to other softwares
-
-- SS3
-- MULTIFAN-CL
-- TMB
-- FIMS
-
----
-
-## Great idea, even greater hurdles to make it happen
-
-- 
 
 ::: {.notes}
 This is all well in good but I do recognize that there are some major hurdles to get us where we need to be, the biggest being time and money. But there is some low-hanging fruit here that I think we can start to take advantage of.
-
 :::
