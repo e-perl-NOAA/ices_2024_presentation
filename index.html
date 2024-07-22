@@ -448,21 +448,30 @@ NOAA Fisheries
 <p>But, we suffer the consequences…</p>
 </div>
 <div style="font-size: 50%">
-<p><br> <sup>1</sup>: Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. <em>J. Syst. Softw.</em>. <strong>109</strong>, 50-61. <a href="https://doi.org/10.1016/j.jss.2015.07.027" class="uri">https://doi.org/10.1016/j.jss.2015.07.027</a></p>
+<p><br> <sup>1</sup> Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. <em>J. Syst. Softw.</em>. <strong>109</strong>, 50-61. <a href="https://doi.org/10.1016/j.jss.2015.07.027" class="uri">https://doi.org/10.1016/j.jss.2015.07.027</a></p>
 </div>
 </section>
 <section id="example-shutdown-of-admb" class="slide level2">
 <h2>Example: Shutdown of ADMB</h2>
-<p><img data-src="images/ADMB_logo.png" class="absolute" style="left: 725px; bottom: 600px; width: 300px; "></p>
-<div class="nopad" style="font-size: 95%">
+<p><img data-src="images/ADMB_logo.png" class="absolute" style="top: -25px; left: 725px; width: 300px; "></p>
+<div class="nopad">
 <ul>
-<li><a href="https://www.admb-project.org/">ADMB</a>: automatic differentiation (AD) application used to build stock assessment models
+<li><p><a href="https://www.admb-project.org/">ADMB</a>: automatic differentiation (AD) application used to build stock assessment models</p>
+<div class="fragment fade-out" data-fragment-index="1">
 <ul>
 <li>Stock Synthesis (SS3)</li>
 <li>Beaufort Assessment Model (BAM)</li>
 <li>General Model for Assessing Crustacean Stocks (GMACs)</li>
-</ul></li>
+</ul>
+</div></li>
+</ul>
+<div class="fragment absolute" data-fragment-index="1" style="top: 190px; ">
+<ul>
 <li>ADMB funding ended March 2024</li>
+</ul>
+</div>
+<div class="fragment absolute" data-fragment-index="2" style="top: 240px; ">
+<ul>
 <li>March 2024 ADMB Foundation meeting to discuss orderly shutdown:
 <ul>
 <li>Final release of ADMB 13.2 March 15, 2024</li>
@@ -471,6 +480,7 @@ NOAA Fisheries
 <li>Bug fixes and user group support?</li>
 </ul></li>
 </ul>
+</div>
 </div>
 <aside class="notes">
 <p>The docker image of admb was an attempt to provide future stability.</p>
@@ -489,26 +499,35 @@ NOAA Fisheries
 <section id="downstream-problems" class="slide level2">
 <h2>Downstream problems</h2>
 <div class="columns">
-<div class="column nopad" style="font-size:95%">
+<div class="column nopad" style="font-size:90%">
 <ul>
 <li>Building models locally
 <ul>
 <li>Most ADMB users do this</li>
 <li>Eventual library mismatches will make this impossible</li>
 </ul></li>
+</ul>
+<div class="fragment" data-fragment-index="1">
+<ul>
 <li>The docker images:
 <ul>
 <li>Steep learning curve</li>
 <li>Works…for now</li>
 </ul></li>
 </ul>
-</div><div class="column nopad" style="font-size:95%">
+</div>
+</div><div class="column nopad" style="font-size:90%">
+<div class="fragment" data-fragment-index="2">
 <ul>
-<li>No concrete plan for bug fixes
+<li>No plan for bug fixes
 <ul>
 <li>The maintainer has moved on to another job</li>
 <li>One volunteer to try to handle bug fixes</li>
 </ul></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ul>
 <li>User group
 <ul>
 <li>Slow responses by select few</li>
@@ -517,7 +536,11 @@ NOAA Fisheries
 </ul>
 </div>
 </div>
-<div style="color: #007582; font-size:125%; font-weight:bold">
+</div>
+<div class="absolute fragment" data-id="box1" style="background:rgba(216, 232, 233, 0.8); width:1200px; height:700px;top: 0px; left: 0px; " data-fragment-index="4">
+
+</div>
+<div class="fragment" style="color: #007582; font-size:125%; font-weight:bold" data-fragment-index="4">
 <p>How do we maintain our models well knowing that a major dependency no longer has support?</p>
 </div>
 <aside class="notes">
@@ -548,7 +571,7 @@ NOAA Fisheries
 </section>
 <section id="improve-software-maintenance2" class="slide level2">
 <h2>Improve software maintenance<sup>2</sup></h2>
-<div class="nopad">
+<div class="nopad" style="font-size:95%">
 <ul>
 <li>Software maintenance plans</li>
 <li>Clear documentation and <br> user manuals/tutorials</li>
@@ -561,7 +584,7 @@ NOAA Fisheries
 </div>
 <p><img data-src="images/software_maintenance_transparent.png" class="absolute" style="top: 160px; left: 500px; width: 580px; "></p>
 <div style="font-size: 50%">
-<p><br> <br> <sup>2</sup>:https://www.simform.com/blog/software-maintenance/</p>
+<p><sup>2</sup> https://www.simform.com/blog/software-maintenance/</p>
 </div>
 <aside class="notes">
 <p>Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product. Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting.</p>
@@ -598,7 +621,7 @@ NOAA Fisheries
 <section id="create-software-development-teams-with-diverse-expertise" class="slide level2">
 <h2>Create software development teams with diverse expertise</h2>
 <ul>
-<li><p>Software development is complex and involves many skills</p>
+<li><p>Software development is complex and involves the skills of people with various expertise</p>
 <div class="columns">
 <div class="column nopad" style="width:48%;">
 <ul>
@@ -624,7 +647,7 @@ NOAA Fisheries
 <section id="create-software-development-teams-with-diverse-expertise-1" class="slide level2">
 <h2>Create software development teams with diverse expertise</h2>
 <ul>
-<li>Software development is complex and involves many skills</li>
+<li>Software development is complex and involves the skills of people with various expertise</li>
 <li>Ensure all aspects of the project are considered
 <ul>
 <li>More well-rounded software products</li>
@@ -656,14 +679,8 @@ NOAA Fisheries
 <div style="color:#007582; font-size:150%; font-weight:bold">
 <p>Sure this is a great idea and all…</p>
 </div>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div style="color:#007582; font-size:150%; font-weight:bold">
-<p>Sure this is a great idea and all…</p>
-</div>
-<p><img data-src="images/runner.png" class="absolute" style="top: 90px; left: 55px; width: 400px; "> <img data-src="images/down.png" class="absolute" style="top: 175px; left: 555px; width: 400px; "></p>
-<div class="absolute" style="color:#007582; font-size:150%; font-weight:bold;top: 525px; left: 375px; ">
+<p><img data-src="images/runner.png" class="absolute fragment" style="top: 90px; left: 55px; width: 400px; " data-fragment-index="1"> <img data-src="images/down.png" class="absolute fragment" style="top: 175px; left: 555px; width: 400px; " data-fragment-index="1"></p>
+<div class="absolute fragment" style="color:#007582; font-size:150%; font-weight:bold;top: 525px; left: 375px; " data-fragment-index="1">
 <p>but there are so many hurdles to make it happen</p>
 </div>
 </section>
@@ -679,18 +696,18 @@ NOAA Fisheries
 </ul></li>
 <li>Building software development <br> <strong>and</strong> user communities</li>
 </ul>
-<p><img data-src="images/fruit_basket.png" class="absolute" style="top: 500px; left: 415px; width: 175px; "> <img data-src="images/fruit_basket.png" class="absolute" style="top: 460px; left: 580px; width: 175px; "> <img data-src="images/fruit_basket.png" class="absolute" style="top: 490px; left: 810px; width: 175px; "></p>
-<div class="absolute" style="font-weight:bold;top: 625px; left: 470px; ">
+<p><img data-src="images/fruit_basket.png" class="absolute fragment" style="top: 500px; left: 415px; width: 175px; " data-fragment-index="1"> <img data-src="images/fruit_basket.png" class="absolute fragment" style="top: 460px; left: 580px; width: 175px; " data-fragment-index="2"> <img data-src="images/fruit_basket.png" class="absolute fragment" style="top: 490px; left: 810px; width: 175px; " data-fragment-index="3"></p>
+<div class="absolute fragment" style="font-weight:bold;top: 625px; left: 470px; " data-fragment-index="1">
 <p>SS3</p>
 </div>
-<div class="absolute" style="font-weight:bold;top: 585px; left: 630px; ">
+<div class="absolute fragment" style="font-weight:bold;top: 585px; left: 630px; " data-fragment-index="2">
 <p>TMB</p>
 </div>
-<div class="absolute" style="font-weight:bold;top: 615px; left: 860px; ">
+<div class="absolute fragment" style="font-weight:bold;top: 615px; left: 860px; " data-fragment-index="3">
 <p>FIMS</p>
 </div>
 </section>
-<section id="section-5" class="slide level2 color-slide" data-background-image="images/team.png" data-background-size="500px" data-background-opacity="0.4">
+<section id="section-4" class="slide level2 color-slide" data-background-image="images/team.png" data-background-size="500px" data-background-opacity="0.4">
 <h2></h2>
 <div style="font-size: 300%; color: #007582; font-weight: bold; text-align: center; padding:150px">
 <p>Let’s tackle this together!</p>

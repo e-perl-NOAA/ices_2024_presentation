@@ -110,25 +110,35 @@ But, we suffer the consequences...
 
 ::: {style="font-size: 50%"}
 <br>
-^1^: Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
+^1^ Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
 :::
 
 ---
 
 ## Example: Shutdown of ADMB
-![](images/ADMB_logo.png){.absolute bottom=600 left=725 width="300"}
+![](images/ADMB_logo.png){.absolute top=-25 left=725 width="300"}
 
-:::{style="font-size: 95%" .nopad}
+:::{.nopad}
 - [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
-  - Stock Synthesis (SS3)
-  - Beaufort Assessment Model (BAM)
-  - General Model for Assessing Crustacean Stocks (GMACs)
+
+  :::{.fragment .fade-out fragment-index=1}
+   - Stock Synthesis (SS3)
+   - Beaufort Assessment Model (BAM)
+   - General Model for Assessing Crustacean Stocks (GMACs)
+  :::
+
+:::{.fragment fragment-index=1 .absolute top=190}
 - ADMB funding ended March 2024
+:::
+
+:::{.fragment fragment-index=2 .absolute top=240}
 - March 2024 ADMB Foundation meeting to discuss orderly shutdown:
   - Final release of ADMB 13.2 March 15, 2024
   - Docker image of ADMB 
   - No new feature development as sole developer leaves
   - Bug fixes and user group support?
+:::
+
 :::
 
 
@@ -142,19 +152,28 @@ The docker image of admb was an attempt to provide future stability.
 
 ::: columns
 
-::: {.column width="47%" .nopad style="font-size:95%"}
+::: {.column width="47%" .nopad style="font-size:90%"}
 - Building models locally
   - Most ADMB users do this
   - Eventual library mismatches will make this impossible
+  
+:::{.fragment fragment-index=1}
 - The docker images:
   - Steep learning curve
   - Works...for now
 :::
 
-::: {.column width="53%" .nopad style="font-size:95%"}
-- No concrete plan for bug fixes
+:::
+
+::: {.column width="53%" .nopad style="font-size:90%"}
+
+:::{.fragment fragment-index=2}
+- No plan for bug fixes
   - The maintainer has moved on to another job
   - One volunteer to try to handle bug fixes
+:::
+
+:::{.fragment fragment-index=3}
 - User group
   - Slow responses by select few
   - Few people with inside-out knowledge of ADMB
@@ -162,7 +181,12 @@ The docker image of admb was an attempt to provide future stability.
 
 :::
 
-::: {style="color: #007582; font-size:125%; font-weight:bold"}
+:::
+
+::: {data-id="box1" style="background:rgba(216, 232, 233, 0.8); width:1200px; height:700px;" .absolute top=0 left=0 .fragment fragment-index=4}
+:::
+
+:::{style="color: #007582; font-size:125%; font-weight:bold" .fragment fragment-index=4}
 How do we maintain our models well knowing that a major dependency no longer has support?
 :::
 
@@ -183,7 +207,7 @@ For stock assessment and other areas.
 ---
 
 ## Improve software maintenance^2^
-:::{.nopad}
+:::{.nopad style="font-size:95%"}
   - Software maintenance plans
   - Clear documentation and <br> user manuals/tutorials
   - Version control
@@ -200,9 +224,7 @@ For stock assessment and other areas.
 ![](images/software_maintenance_transparent.png){.absolute top=160 left=500 width="580"}
 
 ::: {style="font-size: 50%"}
-<br>
-<br>
-^2^:https://www.simform.com/blog/software-maintenance/
+^2^ https://www.simform.com/blog/software-maintenance/
 :::
 
 
@@ -231,7 +253,7 @@ Clear documentation of the code base, equations, and architecture, including inl
 
 ## Create software development teams with diverse expertise
 
-- Software development is complex and involves many skills
+- Software development is complex and involves the skills of people with various expertise
 
   ::: columns
   ::: {.column width="48%" .nopad}
@@ -259,7 +281,7 @@ Clear documentation of the code base, equations, and architecture, including inl
 
 ## Create software development teams with diverse expertise
 
-- Software development is complex and involves many skills
+- Software development is complex and involves the skills of people with various expertise
 - Ensure all aspects of the project are considered
   - More well-rounded software products
   - Long-term stability of the software
@@ -273,24 +295,16 @@ Clear documentation of the code base, equations, and architecture, including inl
 ---
 
 
-## 
-
-::: {style="color:#007582; font-size:150%; font-weight:bold"}
-Sure this is a great idea and all...
-:::
-
----
-
 ##
 
 ::: {style="color:#007582; font-size:150%; font-weight:bold"}
 Sure this is a great idea and all...
 :::
 
-![](images/runner.png){.absolute top=90 left=55 width="400"}
-![](images/down.png){.absolute top=175 left=555 width="400"}
+![](images/runner.png){.absolute top=90 left=55 width="400" .fragment fragment-index=1}
+![](images/down.png){.absolute top=175 left=555 width="400" .fragment fragment-index=1}
 
-::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=525}
+::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=525 .fragment fragment-index=1}
 but there are so many hurdles to make it happen
 :::
 
@@ -310,19 +324,19 @@ but there are so many hurdles to make it happen
   **and** user communities
 
 
-![](images/fruit_basket.png){.absolute top=500 left=415 width="175"}
-![](images/fruit_basket.png){.absolute top=460 left=580 width="175"}
-![](images/fruit_basket.png){.absolute top=490 left=810 width="175"}
+![](images/fruit_basket.png){.absolute top=500 left=415 width="175" .fragment fragment-index=1}
+![](images/fruit_basket.png){.absolute top=460 left=580 width="175" .fragment fragment-index=2}
+![](images/fruit_basket.png){.absolute top=490 left=810 width="175" .fragment fragment-index=3}
 
-::: {.absolute top=625 left=470 style="font-weight:bold;"}
+::: {.absolute top=625 left=470 style="font-weight:bold;" .fragment fragment-index=1}
 SS3
 :::
 
-:::{.absolute top=585 left=630 style="font-weight:bold;"}
+:::{.absolute top=585 left=630 style="font-weight:bold;" .fragment fragment-index=2}
 TMB
 :::
 
-:::{.absolute top=615 left=860 style="font-weight:bold;"}
+:::{.absolute top=615 left=860 style="font-weight:bold;" .fragment fragment-index=3}
 FIMS
 :::
 
