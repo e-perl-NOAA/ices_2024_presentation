@@ -382,11 +382,11 @@ NOAA Fisheries
 </section>
 <section id="section-1" class="slide level2 color-slide" data-background-image="images/coding.jpg" data-background-size="300">
 <h2></h2>
-<div class="absolute" style="font-size:150%; font-weight: bold; color: #d8e8e9;top: 550px; left: 625px; ">
+<div class="absolute" style="font-size:150%; font-weight: bold; color: #d8e8e9;top: 550px; left: 600px; ">
 <p>What I do now…</p>
 </div>
 <aside class="notes">
-<p>We find ourselves in spaces that look more like this. We build the tools that we need to do our jobs because it’s cheaper to do so than paying software developers to do so and to allow us to have more control over the software that is being developed.</p>
+<p>We find ourselves in spaces that look more like this. While we are all scientists, we end up develop software, models, etc. because we are capable coders and we able to find ways to do it with few resources than it would to get software developers to develop it for is. This process is more organic and mostly done as time allows to meet our needs. For the most part, none of us are paid to develop scientific software.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -409,7 +409,7 @@ NOAA Fisheries
 <p><img data-src="images/singularity-logo.png" class="absolute fragment" style="top: 500px; left: 425px; width: 200px; "></p>
 <p><img data-src="images/Microsoft_Azure_Logo.svg.png" class="absolute fragment" style="top: 550px; left: 730px; width: 280px; "></p>
 <aside class="notes">
-<p>We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, take advantage of cloud computing, move into automation, and so much more.</p>
+<p>And for the most part, we do pretty well. We have embraced open-source tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, employ version control, take advantage of cloud computing, and so much more.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -442,13 +442,13 @@ NOAA Fisheries
 </div></li>
 </ul>
 <div class="fragment" style="color: #007582; font-weight:bold; margin-top:-3%; margin-bottom:0%">
-<p>Largely because we lack the time, money, and software development expertise</p>
+<p>Largely because we lack the time, money, and expertise</p>
 </div>
 <div class="fragment" style="text-align: right; margin-bottom:-3%">
 <p>But, we suffer the consequences…</p>
 </div>
 <div style="font-size: 50%">
-<p><br> <sup>1</sup> Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. <em>J. Syst. Softw.</em>. <strong>109</strong>, 50-61. <a href="https://doi.org/10.1016/j.jss.2015.07.027" class="uri">https://doi.org/10.1016/j.jss.2015.07.027</a></p>
+<p><br> <br> <sup>1</sup> Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. <em>J. Syst. Softw.</em>. <strong>109</strong>, 50-61. <a href="https://doi.org/10.1016/j.jss.2015.07.027" class="uri">https://doi.org/10.1016/j.jss.2015.07.027</a></p>
 </div>
 </section>
 <section id="example-shutdown-of-admb" class="slide level2">
@@ -498,8 +498,8 @@ NOAA Fisheries
 </section>
 <section id="downstream-problems" class="slide level2">
 <h2>Downstream problems</h2>
-<div class="columns">
-<div class="column nopad" style="font-size:90%">
+<div class="columns" style="font-size:95%;">
+<div class="column nopad" style="width:47%;">
 <ul>
 <li>Building models locally
 <ul>
@@ -516,7 +516,7 @@ NOAA Fisheries
 </ul></li>
 </ul>
 </div>
-</div><div class="column nopad" style="font-size:90%">
+</div><div class="column nopad" style="width:53%;">
 <div class="fragment" data-fragment-index="2">
 <ul>
 <li>No plan for bug fixes
@@ -546,7 +546,7 @@ NOAA Fisheries
 <aside class="notes">
 <ul>
 <li>Trying to build models using ADMB will eventually require users to have a greater amount of computer and software knowledge</li>
-<li>There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring that these models will be unaffected</li>
+<li>There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring dependent models would be unaffected</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -571,23 +571,27 @@ NOAA Fisheries
 </section>
 <section id="improve-software-maintenance2" class="slide level2">
 <h2>Improve software maintenance<sup>2</sup></h2>
-<div class="nopad" style="font-size:95%">
+<div class="nopad" style="font-size:99%">
 <ul>
 <li>Software maintenance plans</li>
 <li>Clear documentation and <br> user manuals/tutorials</li>
 <li>Version control</li>
-<li>Automated testing (unit, <br> integration, end-to-end)</li>
+<li>Automated testing and CI/CD</li>
 <li>Regular code review</li>
-<li>CI/CD</li>
-<li>Encourage continuous <br> learning for the development <br> team, getting user feedback, <br> and providing user support</li>
+<li>Working groups to support <br> reproducible research<sup>3</sup></li>
+<li>Encourage continuous <br> learning for the development team<sup>3</sup></li>
 </ul>
 </div>
-<p><img data-src="images/software_maintenance_transparent.png" class="absolute" style="top: 160px; left: 500px; width: 580px; "></p>
-<div style="font-size: 50%">
+<p><img data-src="images/software_maintenance_transparent.png" class="absolute" style="top: 160px; left: 500px; width: 560px; "></p>
+<div style="font-size: 49%">
 <p><sup>2</sup> https://www.simform.com/blog/software-maintenance/</p>
+<p><sup>3</sup> Thimbleby H (2024). Improving Science That Uses Code. <em>Comput. J.</em> <strong>67(4)</strong>, 1381–1404. https://doi.org/10.1093/comjnl/bxad067</p>
 </div>
 <aside class="notes">
-<p>Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product. Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting.</p>
+<p>Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product.</p>
+<p>Clear documentation of the code base (including intent), equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting.</p>
+<p>Testing: unit, integration, end-to-end</p>
+<p>Continuous learning and training for scientists/development teams to</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -636,7 +640,7 @@ NOAA Fisheries
 <ul>
 <li>cloud computing</li>
 <li>data science</li>
-<li>computer science</li>
+<li>software engineering<sup>3</sup></li>
 <li>systems architecture and administration</li>
 <li>subject matter expertise (population dynamics, MSE, etc.)</li>
 </ul>
@@ -680,9 +684,22 @@ NOAA Fisheries
 <p>Sure this is a great idea and all…</p>
 </div>
 <p><img data-src="images/runner.png" class="absolute fragment" style="top: 90px; left: 55px; width: 400px; " data-fragment-index="1"> <img data-src="images/down.png" class="absolute fragment" style="top: 175px; left: 555px; width: 400px; " data-fragment-index="1"></p>
-<div class="absolute fragment" style="color:#007582; font-size:150%; font-weight:bold;top: 525px; left: 375px; " data-fragment-index="1">
+<div class="absolute fragment" style="color:#007582; font-size:150%; font-weight:bold;top: 550px; left: 375px; " data-fragment-index="1">
 <p>but there are so many hurdles to make it happen</p>
 </div>
+<aside class="notes">
+<p>without falling flat on our faces</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="low-hanging-fruit" class="slide level2">
 <h2>Low-hanging fruit</h2>
@@ -715,6 +732,19 @@ NOAA Fisheries
 <div class="footer">
 <p>https://e-perl-noaa.github.io/ices_2024_presentation</p>
 </div>
+<aside class="notes">
+<p>Code should be developed in a professional, rigorous, and supportive environment that facilitates quality science with clear presentation and appropriately rigorous scrutiny.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 

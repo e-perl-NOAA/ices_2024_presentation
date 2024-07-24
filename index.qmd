@@ -44,19 +44,18 @@ Maybe like many of you, this is what I went to school for and was trained for.
 
 ## {.color-slide background-image="images/coding.jpg" background-size=300}
 
-:::{.absolute top=550 left=625 style="font-size:150%; font-weight: bold; color: #d8e8e9;"}
+:::{.absolute top=550 left=600 style="font-size:150%; font-weight: bold; color: #d8e8e9;"}
 What I do now...
 :::
 
 ::: {.notes}
-We find ourselves in spaces that look more like this. We build the tools that we need to do our jobs because it's cheaper to do so than paying software developers to do so and to allow us to have more control over the software that is being developed.
+We find ourselves in spaces that look more like this. While we are all scientists, we end up develop software, models, etc. because we are capable coders and we able to find ways to do it with few resources than it would to get software developers to develop it for is. This process is more organic and mostly done as time allows to meet our needs. For the most part, none of us are paid to develop scientific software.
 :::
 
 ---
 
 
 ## For the most part, we do pretty well!
-
 
 ![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png){.absolute top=125 width="300"}
 ![](images/GitHub-logo.png){.absolute left=410 width="215" .fragment}
@@ -77,7 +76,7 @@ We find ourselves in spaces that look more like this. We build the tools that we
 
 
 ::: {.notes}
-We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, take advantage of cloud computing, move into automation, and so much more.
+And for the most part, we do pretty well. We have embraced open-source tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, employ version control, take advantage of cloud computing, and so much more.
 :::
 
 ---
@@ -88,7 +87,8 @@ We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching
 
 - We are criticized for for lacking adequate:
 
-  ::: columns
+  :::: {.columns}
+  
   ::: {.column width="40%" .nopad}
     - Unit tests
     - Documentation
@@ -98,10 +98,11 @@ We have embraced tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching
     - Open-source code management
     - Long-term maintenance
   :::
-  :::
+  
+  ::::
 
 ::: {style="color: #007582; font-weight:bold; margin-top:-3%; margin-bottom:0%" .fragment}
-Largely because we lack the time, money, and software development expertise
+Largely because we lack the time, money, and expertise
 :::
 
 ::: {style="text-align: right; margin-bottom:-3%" .fragment}
@@ -109,6 +110,7 @@ But, we suffer the consequences...
 :::
 
 ::: {style="font-size: 50%"}
+<br>
 <br>
 ^1^ Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
 :::
@@ -150,14 +152,14 @@ The docker image of admb was an attempt to provide future stability.
 
 ## Downstream problems
 
-::: columns
+:::: {.columns style="font-size:95%;"}
 
-::: {.column width="47%" .nopad style="font-size:90%"}
+::: {.column width="47%" .nopad}
 - Building models locally
   - Most ADMB users do this
   - Eventual library mismatches will make this impossible
   
-:::{.fragment fragment-index=1}
+::: {.fragment fragment-index=1}
 - The docker images:
   - Steep learning curve
   - Works...for now
@@ -165,15 +167,15 @@ The docker image of admb was an attempt to provide future stability.
 
 :::
 
-::: {.column width="53%" .nopad style="font-size:90%"}
+::: {.column width="53%" .nopad}
 
-:::{.fragment fragment-index=2}
+::: {.fragment fragment-index=2}
 - No plan for bug fixes
   - The maintainer has moved on to another job
   - One volunteer to try to handle bug fixes
 :::
 
-:::{.fragment fragment-index=3}
+::: {.fragment fragment-index=3}
 - User group
   - Slow responses by select few
   - Few people with inside-out knowledge of ADMB
@@ -181,7 +183,7 @@ The docker image of admb was an attempt to provide future stability.
 
 :::
 
-:::
+::::
 
 ::: {data-id="box1" style="background:rgba(216, 232, 233, 0.8); width:1200px; height:700px;" .absolute top=0 left=0 .fragment fragment-index=4}
 :::
@@ -192,7 +194,7 @@ How do we maintain our models well knowing that a major dependency no longer has
 
 ::: {.notes}
 - Trying to build models using ADMB will eventually require users to have a greater amount of computer and software knowledge
-- There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring that these models will be unaffected
+- There are still stock assessment models that heavily depend on ADMB and there was little planning on how phase out ADMB while ensuring dependent models would be unaffected
 :::
 
 ---
@@ -204,38 +206,45 @@ How can we make more stable scientific software?
 ::: {style="color: #007582; font-weight: bold; font-size: 150%"}
 For stock assessment and other areas.
 :::
+
 ---
 
 ## Improve software maintenance^2^
-:::{.nopad style="font-size:95%"}
+:::{.nopad style="font-size:99%"}
   - Software maintenance plans
   - Clear documentation and <br> user manuals/tutorials
   - Version control
-  - Automated testing (unit, <br>
-    integration, end-to-end)
+  - Automated testing and CI/CD
   - Regular code review
-  - CI/CD
+  - Working groups to support <br>
+    reproducible research^3^
   - Encourage continuous <br>
-    learning for the development <br> 
-    team, getting user feedback, <br>
-    and providing user support
+    learning for the development team^3^
 :::
 
-![](images/software_maintenance_transparent.png){.absolute top=160 left=500 width="580"}
+![](images/software_maintenance_transparent.png){.absolute top=160 left=500 width="560"}
 
-::: {style="font-size: 50%"}
+::: {style="font-size: 49%"}
 ^2^ https://www.simform.com/blog/software-maintenance/
+
+^3^ Thimbleby H (2024). Improving Science That Uses Code. *Comput. J.* **67(4)**, 1381–1404. https://doi.org/10.1093/comjnl/bxad067
 :::
 
 
 ::: {.notes}
 Software maintenance plans help keep software up with changing needs and adapt to new technologies and help enhance the efficiency of the product.
-Clear documentation of the code base, equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting. 
+
+Clear documentation of the code base (including intent), equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting. 
+
+Testing: unit, integration, end-to-end
+
+Continuous learning and training for scientists/development teams to 
 :::
 
 ---
 
 ## Foster developer and user communities {style="font-size=60%"}
+
 :::{.nopad}
 - Fundamental to thriving software communities
 - Useful way support and maintain software after it has been phased out and/or the maintainer changes
@@ -249,13 +258,18 @@ Clear documentation of the code base, equations, and architecture, including inl
   - Example: [GitHub community](https://github.com/orgs/community/discussions/)
 :::
 
+::: {.notes}
+
+:::
+
 ---
 
 ## Create software development teams with diverse expertise
 
 - Software development is complex and involves the skills of people with various expertise
 
-  ::: columns
+  :::: {.columns}
+  
   ::: {.column width="48%" .nopad}
     - coding
     - design & UI/UX
@@ -265,17 +279,19 @@ Clear documentation of the code base, equations, and architecture, including inl
     - mathematics
     - AI & ML
   :::
+  
   ::: {.column width="52%" .nopad}
     - cloud computing
     - data science
-    - computer science
+    - software engineering^3^
     - systems architecture and 
       administration
     - subject matter expertise 
       (population dynamics, 
       MSE, etc.)
   :::
-  :::
+  
+  ::::
 
 ---
 
@@ -304,8 +320,12 @@ Sure this is a great idea and all...
 ![](images/runner.png){.absolute top=90 left=55 width="400" .fragment fragment-index=1}
 ![](images/down.png){.absolute top=175 left=555 width="400" .fragment fragment-index=1}
 
-::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=525 .fragment fragment-index=1}
+::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=550 .fragment fragment-index=1}
 but there are so many hurdles to make it happen
+:::
+
+::: {.notes}
+without falling flat on our faces
 :::
 
 ---
@@ -340,6 +360,10 @@ TMB
 FIMS
 :::
 
+::: {.notes}
+Short, conscise tutorials are generally best for learning.
+:::
+
 ---
 
 ## {.color-slide background-image="images/team.png" background-size=500px background-opacity=0.4}
@@ -350,6 +374,10 @@ Let's tackle this together!
   
 ::: footer
 https://e-perl-noaa.github.io/ices_2024_presentation
+:::
+
+::: {.notes}
+Code should be developed in a professional, rigorous, and supportive environment that facilitates quality science with clear presentation and appropriately rigorous scrutiny. 
 :::
 
 ---
