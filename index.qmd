@@ -16,7 +16,7 @@ from: markdown+emoji
 <h4>[Andrea Havron](mailto:andrea.havron@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 <h4>[Ian Taylor](mailto:ian.taylor@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 
-![](images/fish_laptop.png){.absolute left=470 top=190 width="580"}
+![](images/fish_laptop.png){.absolute left=490 top=185 width="560"}
 
 
 ::: footer
@@ -37,19 +37,19 @@ What I was trained to do...
 ![](images/rov_drive.png){.absolute left=405 top=60 width="185"}
 
 ::: {.notes}
-Maybe like many of you, this is what I went to school for and was trained for.
+Maybe like many of you, this is what I was trained to do.
 :::
 
 ---
 
 ## {.color-slide background-image="images/coding.jpg" background-size=300}
 
-:::{.absolute top=550 left=600 style="font-size:150%; font-weight: bold; color: #d8e8e9;"}
+:::{.absolute top=550 left=625 style="font-size:150%; font-weight: bold; color: #d8e8e9;"}
 What I do now...
 :::
 
 ::: {.notes}
-We find ourselves in spaces that look more like this. While we are all scientists, we end up develop software, models, etc. because we are capable coders and we able to find ways to do it with few resources than it would to get software developers to develop it for is. This process is more organic and mostly done as time allows to meet our needs. For the most part, none of us are paid to develop scientific software.
+And like myself, you may find yourself sitting at a computer staring more at code than going out into the field. While we all call ourselves scientists, we end up spend a lot of time developing software, models, tools, etc.
 :::
 
 ---
@@ -76,7 +76,7 @@ We find ourselves in spaces that look more like this. While we are all scientist
 
 
 ::: {.notes}
-And for the most part, we do pretty well. We have embraced open-source tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, employ version control, take advantage of cloud computing, and so much more.
+And for the most part, we do pretty well. We have embraced open-source tools like RStudio, Jupyter, GitHub, Docker, and more. Teaching ourselves how to code, use containers, employ version control, take advantage of cloud computing, and so much more. AND we have found ways to do it with few resources and with little official training.
 :::
 
 ---
@@ -115,12 +115,17 @@ But, we suffer the consequences...
 ^1^ Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
 :::
 
+::: {.notes}
+This process is more organic and mostly done as time allows to meet our needs. For the most part, none of us are paid to develop scientific software.
+:::
+
 ---
 
 ## Example: Shutdown of ADMB
 ![](images/ADMB_logo.png){.absolute top=-25 left=725 width="300"}
 
 :::{.nopad}
+:::{.fragment fragment-index=1}
 - [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
 
   :::{.fragment .fade-out fragment-index=1}
@@ -129,11 +134,13 @@ But, we suffer the consequences...
    - General Model for Assessing Crustacean Stocks (GMACs)
   :::
 
-:::{.fragment fragment-index=1 .absolute top=190}
+:::
+
+:::{.fragment fragment-index=2 .absolute top=190}
 - ADMB funding ended March 2024
 :::
 
-:::{.fragment fragment-index=2 .absolute top=240}
+:::{.fragment fragment-index=3 .absolute top=240}
 - March 2024 ADMB Foundation meeting to discuss orderly shutdown:
   - Final release of ADMB 13.2 March 15, 2024
   - Docker image of ADMB 
@@ -155,16 +162,17 @@ The docker image of admb was an attempt to provide future stability.
 :::: {.columns style="font-size:95%;"}
 
 ::: {.column width="47%" .nopad}
-- Building models locally
-  - Most ADMB users do this
-  - Eventual library mismatches will make this impossible
+- Building ADMB
+  - Build locally
+    - Most users do this
+    - Eventual library mismatches will make this impossible
+    
+  :::{.fragment fragment-index=1}
+  - Building from docker images:
+    - Steep learning curve
+    - Works...for now
+  :::
   
-::: {.fragment fragment-index=1}
-- The docker images:
-  - Steep learning curve
-  - Works...for now
-:::
-
 :::
 
 ::: {.column width="53%" .nopad}
@@ -172,7 +180,7 @@ The docker image of admb was an attempt to provide future stability.
 ::: {.fragment fragment-index=2}
 - No plan for bug fixes
   - The maintainer has moved on to another job
-  - One volunteer to try to handle bug fixes
+  - No documentation on how to release after a bug fix
 :::
 
 ::: {.fragment fragment-index=3}
@@ -188,8 +196,8 @@ The docker image of admb was an attempt to provide future stability.
 ::: {data-id="box1" style="background:rgba(216, 232, 233, 0.8); width:1200px; height:700px;" .absolute top=0 left=0 .fragment fragment-index=4}
 :::
 
-:::{style="color: #007582; font-size:125%; font-weight:bold" .fragment fragment-index=4}
-How do we maintain our models well knowing that a major dependency no longer has support?
+:::{style="color: #007582; font-size:125%; font-weight:bold;" .absolute bottom=-20 left=10 .fragment fragment-index=4}
+How do we maintain our models well when a major dependency no longer has support?
 :::
 
 ::: {.notes}
@@ -201,10 +209,14 @@ How do we maintain our models well knowing that a major dependency no longer has
 
 ## 
 ::: {.fullslide-text .flow}
-How can we make more stable scientific software?
+How do we develop stable scientific software?
 :::
 ::: {style="color: #007582; font-weight: bold; font-size: 150%"}
-For stock assessment and other areas.
+For fisheries science and beyond.
+:::
+
+::: {.notes}
+How do we (as fisheries scientists) develop scientific software that is more stable and resistant to changes.
 :::
 
 ---
@@ -237,8 +249,6 @@ Software maintenance plans help keep software up with changing needs and adapt t
 Clear documentation of the code base (including intent), equations, and architecture, including inline comments, README files, comprehensive user manuals, and tutorials for easy understanding and troubleshooting. 
 
 Testing: unit, integration, end-to-end
-
-Continuous learning and training for scientists/development teams to 
 :::
 
 ---
@@ -248,18 +258,12 @@ Continuous learning and training for scientists/development teams to
 :::{.nopad}
 - Fundamental to thriving software communities
 - Useful way support and maintain software after it has been phased out and/or the maintainer changes
-
-- Ways to build a strong developer community
+- Ways to build a strong developer community:
   - Chat platform :speech_balloon:
   - Active developer forums :raised_hand:
   - Take advantage of open source :computer:
   - Recurring office hours :office:
   - Developer events & trainings :circus_tent:
-  - Example: [GitHub community](https://github.com/orgs/community/discussions/)
-:::
-
-::: {.notes}
-
 :::
 
 ---
@@ -293,6 +297,10 @@ Continuous learning and training for scientists/development teams to
   
   ::::
 
+::: {.notes}
+- We should be incorporating people with expertise in these skills into our software development projects to...
+:::
+
 ---
 
 ## Create software development teams with diverse expertise
@@ -304,10 +312,6 @@ Continuous learning and training for scientists/development teams to
 - Better adaptability/capacity for change 
   - Incorporate new technologies and methods quickly
 
-::: {.notes}
-- We should be incorporating people with expertise in these skills into our software development projects to help ensure that all aspects of the project are considered, which can lead to more well-rounded software products
-:::
-
 ---
 
 
@@ -317,15 +321,10 @@ Continuous learning and training for scientists/development teams to
 Sure this is a great idea and all...
 :::
 
-![](images/runner.png){.absolute top=90 left=55 width="400" .fragment fragment-index=1}
-![](images/down.png){.absolute top=175 left=555 width="400" .fragment fragment-index=1}
+![](images/runner.png){.absolute top=100 left=240 width="420" .fragment fragment-index=1}
 
 ::: {style="color:#007582; font-size:150%; font-weight:bold;" .absolute left=375 top=550 .fragment fragment-index=1}
 but there are so many hurdles to make it happen
-:::
-
-::: {.notes}
-without falling flat on our faces
 :::
 
 ---
@@ -407,22 +406,4 @@ Code should be developed in a professional, rigorous, and supportive environment
 ::: {.notes}
 A lot of times out of necessity because there is no money to get someone to 
 create tools, packages, programs, etc. for us, so we build it ourselves.
-:::
-
----
-
-## {visibility="hidden"}
-
-::: {.bigbold .absolute top="-15%"}
-MONEY
-:::
-::: {.bigbold .absolute top="20%"}
-MONEY
-:::
-::: {.bigbold .absolute top="55%"}
-MONEY
-:::
-
-::: {.notes}
-This is all well in good but I do recognize that there are some major hurdles to get us where we need to be, the biggest being time and money. But there is some low-hanging fruit here that I think we can start to take advantage of.
 :::
