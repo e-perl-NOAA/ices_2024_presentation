@@ -85,6 +85,7 @@ And for the most part, we do pretty well. We have embraced open-source tools lik
 
 - Scientists develop software and models fundamentally different than software developers/engineers^1^
 
+::: {.fragment fragment-index=1}
 - We are criticized for lacking adequate:
 
   :::: {.columns}
@@ -101,11 +102,13 @@ And for the most part, we do pretty well. We have embraced open-source tools lik
   
   ::::
 
-::: {style="color: #007582; font-weight:bold; margin-top:-3%; margin-bottom:0%" .fragment}
+:::
+
+::: {style="color: #007582; font-weight:bold; margin-top:-3%; margin-bottom:0%" .fragment fragment-index=2}
 Largely because we lack the time, money, and expertise
 :::
 
-::: {style="text-align: right; margin-bottom:-3%" .fragment}
+::: {style="text-align: right; margin-bottom:-3%" .fragment fragment-index=3}
 But, we suffer the consequences...
 :::
 
@@ -179,7 +182,7 @@ The docker image of admb was an attempt to provide future stability.
 
 ::: {.fragment fragment-index=2}
 - No plan for bug fixes
-  - The maintainer has moved on to another job
+  - No one to implement fixes
   - No documentation on how to release after a bug fix
 :::
 
