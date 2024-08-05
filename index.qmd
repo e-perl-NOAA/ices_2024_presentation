@@ -85,7 +85,7 @@ And for the most part, we do pretty well. We have embraced open-source tools lik
 
 - Scientists develop software and models fundamentally different than software developers/engineers^1^
 
-- We are criticized for for lacking adequate:
+- We are criticized for lacking adequate:
 
   :::: {.columns}
   
@@ -128,7 +128,7 @@ This process is more organic and mostly done as time allows to meet our needs. F
 :::{.fragment fragment-index=1}
 - [ADMB](https://www.admb-project.org/): automatic differentiation (AD) application used to build stock assessment models
 
-  :::{.fragment .fade-out fragment-index=1}
+  :::{.fragment .fade-out fragment-index=2}
    - Stock Synthesis (SS3)
    - Beaufort Assessment Model (BAM)
    - General Model for Assessing Crustacean Stocks (GMACs)
@@ -227,7 +227,6 @@ How do we (as fisheries scientists) develop scientific software that is more sta
   - Clear documentation and <br> user manuals/tutorials
   - Version control
   - Automated testing and CI/CD
-  - Regular code review
   - Working groups to support <br>
     reproducible research^3^
   - Encourage continuous <br>
