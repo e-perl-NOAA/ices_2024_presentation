@@ -236,7 +236,7 @@ How do we (as fisheries scientists) develop scientific software that is more sta
     learning for the development team^3^
 :::
 
-![](images/software_maintenance_transparent.png){.absolute top=160 left=500 width="560"}
+![](images/software_maintenance_transparent.png){.absolute top=150 left=510 width="520"}
 
 ::: {style="font-size: 49%"}
 ^2^ https://www.simform.com/blog/software-maintenance/
