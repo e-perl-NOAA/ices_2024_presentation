@@ -15,6 +15,11 @@ from: markdown+emoji
 <h3>[Elizabeth Perl](mailto:elizabeth.gugliotti@noaa.gov)</h3> <h5>ECS, NOAA Fisheries</h5> <br>
 <h4>[Andrea Havron](mailto:andrea.havron@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 <h4>[Ian Taylor](mailto:ian.taylor@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
+<br>
+<br>
+<br>
+<br>
+<h6><br>ICES ASC 2024</h6>
 
 ![](images/fish_laptop.png){.absolute left=490 top=185 width="560"}
 

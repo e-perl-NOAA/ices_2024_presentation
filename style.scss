@@ -165,10 +165,17 @@ h4 {
 
 h5 {
   padding: 0em;
-  font-size: 22px;
   white-space: nowrap;
   display: inline;
   font-size: 70%;
+}
+
+h6 {
+  padding: 0em;
+  font-size: 70%;
+  white-space: nowrap;
+  color: $theme-grey !important;
+  text-align: center !important;
 }
 
 .lesspad li:not(:last-child) {
