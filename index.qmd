@@ -17,11 +17,12 @@ from: markdown+emoji
 <h4>[Ian Taylor](mailto:ian.taylor@noaa.gov)</h4> <h5>NOAA Fisheries</h5> <br>
 <br>
 <br>
-<br>
-<br>
-<h6><br>ICES ASC 2024</h6>
+<h6><br><br><br>ICES ASC 2024</h6>
 
 ![](images/fish_laptop.png){.absolute left=490 top=185 width="560"}
+
+
+![](images/noaa-fisheries.png){.absolute left=860 top=505 width="60"}
 
 
 ::: footer
@@ -64,6 +65,7 @@ And like myself, you may find yourself sitting at a computer staring more at cod
 
 ![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png){.absolute top=125 width="300"}
 ![](images/GitHub-logo.png){.absolute left=410 width="215" .fragment}
+
 ![](images/Docker.png){.absolute left=760 width="230" .fragment}
 
 ![](images/Python-Logo.png){.absolute top=350 width="315" .fragment}

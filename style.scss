@@ -131,7 +131,6 @@ $presentation-h2-font-size: 1.4em;
   font-size: 12px;
 }
 
-
 h2 {
   line-height: 0.5em;
   margin-top: 0;
@@ -162,7 +161,6 @@ h4 {
   font-size: 55;
 }
 
-
 h5 {
   padding: 0em;
   white-space: nowrap;
@@ -179,10 +177,9 @@ h6 {
 }
 
 .lesspad li:not(:last-child) {
-    line-height:30px  !important;
-    margin-right:50px !important;
+  line-height:30px  !important;
+  margin-right:50px !important;
 }
-
 
 // fragment highlight colors --------------------------------------------------
 .reveal .slides section {
