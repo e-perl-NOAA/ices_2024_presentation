@@ -121,7 +121,6 @@ But, we suffer the consequences...
 
 ::: {style="font-size: 50%"}
 <br>
-<br>
 ^1^ Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
 :::
 
