@@ -262,6 +262,10 @@ Testing: unit, integration, end-to-end
 
 ---
 
+![](images/friends_plan.jpg){width="400" height="600"}
+
+---
+
 ## Foster developer and user communities {style="font-size=60%"}
 
 :::{.nopad}
