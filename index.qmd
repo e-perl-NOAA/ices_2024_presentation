@@ -393,6 +393,22 @@ Code should be developed in a professional, rigorous, and supportive environment
 
 ---
 
+## Software Maintenance Plan Templates
+
+::: {.column width="50%" .nopad}
+![](images/maintenance_plan_template.pdf)
+:::
+
+::: {.column width="50%" .nopad}
+![](images/software-development-maintenance-plan.pdf)
+:::
+
+::: {style="font-size: 49%"}
+https://images.techstreet.com/direct/SWM_samples.pdf
+:::
+
+---
+
 ## Can we build it? Yes we can! {visibility="hidden"}
 
 ![](images/Bob_the_builder.png){.absolute top=380}
