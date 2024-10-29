@@ -119,7 +119,11 @@ Largely because we lack the time, money, and expertise
 But, we suffer the consequences...
 :::
 
-::: {style="font-size: 50%"}
+::: {style="font-size: 10%"}
+<br>
+:::
+
+::: {style="font-size: 40%"}
 ^1^ Kelly D (2015). Scientific software development viewed as knowledge acquisition: Towards understanding the development of risk-averse scientific software. *J. Syst. Softw.*. **109**, 50-61. <https://doi.org/10.1016/j.jss.2015.07.027>
 :::
 
@@ -241,9 +245,14 @@ How do we (as fisheries scientists) develop scientific software that is more sta
     learning for the development team^3^
 :::
 
-![](images/software_maintenance_transparent.png){.absolute top=150 left=510 width="520"}
+![](images/software_maintenance_transparent.png){.absolute top=150 left=525 width="520"}
 
-::: {style="font-size: 49%"}
+::: {style="font-size: 40%; margin-bottom:-3%; margin-top:-3%"}
+<br>
+<br>
+<br>
+<br>
+
 ^2^ https://www.simform.com/blog/software-maintenance/
 
 ^3^ Thimbleby H (2024). Improving Science That Uses Code. *Comput. J.* **67(4)**, 1381–1404. https://doi.org/10.1093/comjnl/bxad067
